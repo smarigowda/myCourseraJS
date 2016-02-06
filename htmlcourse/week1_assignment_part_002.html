@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html>
+
+<style>
+fieldset { 
+	background:lightyellow; 
+	border:10px solid yellow;
+	margin-bottom:10px;
+	width:720px
+}
+
+label {
+	width:180px;
+	display:inline-block;
+	text:right-align;
+	text:top-align
+}
+
+label[for=gender]
+label[for=contactmethod] {
+	width:auto
+}
+
+textarea {
+	width:360px;
+	height:50px
+}
+
+
+</style>
+
+<h1>Please enter your details for our dating website</h1>
+<form action="https://ihome.ust.hk/~rossiter/cgi-bin/show_everything.php" method="post" enctype="multipart/form-data" >
+
+<fieldset>
+<legend>Your Face</legend>
+<label for="avatar">Your image:</label>
+  <input type="file" name="pic" accept="image/*" required>
+<p>Image Preview:</p> <img id="preview"></img>
+</fieldset>
+<fieldset>
+
+<legend>Your General Details</legend>
+<label for="name"> Name:</label>
+ <input type="text" required></input>
+<br/>
+<label for="gender">Gender:</label>
+<input type="radio" name="group1" value="M" required>Male
+<input type="radio" name="group1" value="F" required>Female
+<br/>
+<label for="age">Age:</label> <input type="number"required></input>
+<br/>
+<label for="dob">date of Birth:</label> <input type="date"></input>
+<br/>
+<label for="color">Favourite Color:</label> <input type="color"></input>
+<br/>
+<label for="country">Which country:</label>
+<select name="select">
+  <option disabled selected> -- select an option -- </option>
+  <option value="c1">India</option> 
+  <option value="c2">Japan</option>
+  <option value="c3">UK</option>
+  <option value="c4">UK</option>
+  <option value="c5">UK</option>
+  <option value="c6">UK</option>
+</select>
+</fieldset>
+
+<fieldset>
+<legend>Your Indicators</legend>
+ <label for="height">Height:</label>Short <input type="range" min="0" max="100"></input> Tall
+<br/>
+<label for="salay">salary:</label> Poor <input type="range" min="0" max="100"></input> Rich
+</fieldset>
+<fieldset>
+
+<legend>Your Contact Information</legend>
+
+<label for="mail">Email:</label>  <input type="email" required></input>
+<br/>
+<label for="tele">Mobile:</label>  <input type="tel"></input>
+<br/>
+<label for="addr">Address:</label>  <textarea name="textarea" rows="2" cols="30"></textarea>
+<br/>
+<label for="contactmethod">Method to contact you:</label>  <input type="checkbox"> Email <input type="checkbox"> Whatsapp <input type="checkbox"> In-app chat
+<br/>
+
+</fieldset>
+<input type="submit" value="Submit">
+</form>
+
+</html>

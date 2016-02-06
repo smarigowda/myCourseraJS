@@ -1,0 +1,30 @@
+<html>
+<head>
+	<script>
+		// global variables
+		var colors = ['cyan', 'red', 'green', 'aqua', 'black']
+		var sorted = colors.sort()
+		var finished = false
+		var guess_input, guesses = 0
+		var target
+
+		function do_game() {
+			var target_index = Math.random() * colors.length
+			target = colors[Math.floor(target_index)]
+			console.log('target = ' + target)
+			alert('for debugging: target = ' + target)
+
+				console.log('do game function called')
+				while(!finished) {
+					guess_input = prompt('I am thinking of one of the colors\n' + sorted.join())
+					guesses += 1
+					if ( guess_input == target) {
+						finished = true
+					}
+				}
+		}
+	</script>
+</head>
+<body onload="do_game()">
+</body>
+</html>

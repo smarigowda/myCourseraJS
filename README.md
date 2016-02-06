@@ -1,1 +1,2 @@
-# myCourseraJS
+# myCoursera
+learning js

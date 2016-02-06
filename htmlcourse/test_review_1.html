@@ -1,0 +1,84 @@
+
+<!Doctype html>
+<html>
+<head>
+<meta charset="uft-8">
+</head>
+
+<body>
+<h1>Please Enter Your Details For Our Dating Website</h1>
+
+<form>
+<fieldset>
+  <legend>Your Face</legend>
+  <label for="file">Your image:</label>
+  <input id="file" type="file" value="choose file"><br/>
+
+  <label for="preview">Image preview:</label> <img id="preview"  src="https://cdn.photographylife.com/wp-content/uploads/2014/06/Nikon-D810-Image-Sample-6.jpg" height=120 alt="your image">
+
+</fieldset>
+
+</form>
+
+<form>
+  <fieldset>
+    <legend>Your General Details</legend>
+    <label for="name" >Name:</label>
+      <input id="name" type="text"><br/>
+    <label for="gender"> Gender:</label>
+    <input id="gender" type="radio" name="gender" value="male" checked>male
+    <input id="gender" type="radio" name="gender" value="female">female<br/>
+    <label for="age">age</label>
+    <input id="age" type="number"><br/>
+    <label for="dateofbirth"> Date of birth:</label>
+    <input id="dateofbirth" type="date"><br/>
+    <label for="favouriteColor">Favourite color:</label>
+    <input id="favouriteColor" type="color"><br/>
+
+    <label for="whichcountry">Which country:</label>
+    <select id="whichcountry">
+                <option value=""></option>
+                <option value="america">america </option>
+                <option value="britain">britain</option>
+                <option value="china">china</option>
+                <option value="denmark">denmark</option>
+                <option value="egypt">egypt</option>
+
+              </select>
+  </fieldset>
+</form>
+
+<form>
+  <fieldset>
+    <legend>Your indicators</legend>
+
+ <label for="height">Height:</label>
+ <input id="height" type="range" name= "" min="0" max="100"><br/>
+ <label for="salary">salary:</label>
+ <input id="salary" type="range" name= ""  min="0" max="100"><br/>
+  </fieldset>
+</form>
+
+<form>
+  <fieldset>
+    <legend>Your Contact information</legend>
+     <label for="email">Email:</label>
+     <input id="email"type="email" ><br/>
+     <label for="mobile">mobile:</label>
+     <input id="mobile" type="tel" ><br/>
+     <label for="address">address:</label>
+     <textarea id="address" ></textarea>
+     <label for="methodtocontactyou">Method to contact you:</label>
+     <input id="methodtocontactyou"type="checkbox" name="Email">Email
+     <input id="methodtocontactyou" type="checkbox" name="whatsapp">whatsapp
+     <input id="methodtocontactyou"type="checkbox" name="in-app chat">in-app chat
+
+  </fieldset>
+</form>
+
+<input type="submit">
+
+
+
+</body>
+</html>

@@ -1,0 +1,58 @@
+<html>
+<head>
+	<script>
+		// global variables
+		var colors = ['cyan', 'red', 'green']
+		var sorted = colors.sort()
+		var finished = false
+		var guessedColor, guesses = 0
+		var targetColor
+		
+		function do_game() {
+		var rnum = Math.random() * colors.length
+		targetColor = colors[Math.floor(rnum)]
+		console.log('targetColor = ' + targetColor)
+
+			console.log('do game function called')
+			while(!finished) {
+				guessedColor = prompt('I am thinking of one of the colors' + JSON.stringify(sorted))
+				guesses += 1
+				finished = check_guess()
+
+			}
+		}
+
+		function check_guess() {
+			// color not in the list
+			if (colors.indexOf(guessedColor) < 0) {
+
+				alert('Sorry, I do not recognise your color, \nplease try again')
+				return false
+			}
+
+			if (guessedColor > targetColor) {
+				alert('Sorry, your guess is not correct\n your color is alphabetically higher than mine. Please try again')
+				return false
+			}
+
+			if (guessedColor < targetColor) {
+				alert('Sorry, your guess is not correct\n your color is alphabetically lower than mine. Please try again')
+				return false
+			}
+
+			if (guessedColor == targetColor) {
+				alert('Congratulations')
+				var myBody=document.getElementsByTagName("body")[0];
+				myBody.style.background=targetColor;
+				return true
+			}
+			// console.log('targetColor = ' + targetColor)
+			// console.log('guessedColor = ' + guessedColor)
+			// return true
+
+		}
+	</script>
+</head>
+<body onload="do_game()">
+</body>
+</html>

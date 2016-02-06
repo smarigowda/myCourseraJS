@@ -1,0 +1,111 @@
+<html>
+
+<head>
+</head>
+
+<style>
+
+div {
+	width: 500px;
+	height: 500px;
+	overflow: hidden;
+}
+
+div#rightside {
+	position: absolute;
+	left: 500px;
+	border-left: 1px black solid;
+}
+
+div#leftside {
+	float: left;
+	position: relative;
+}
+
+
+img {
+	position: absolute;
+}
+
+</style>
+
+<body onload="generateFaces()">
+
+<h1>Matching Game</h1>
+<p>Click on the extra smiling face on the left</p>
+
+<div id='leftside'></div>
+
+<div id='rightside'></div>
+
+<script>
+
+	var theBody = document.getElementsByTagName('body')[0]
+
+	// console.log('runnig the script')
+	var numberOfFaces = 5
+	var imageWidth = imageHeight = 100
+	var topmax = 500 - imageHeight // to cater for image width & height
+	var leftmax = 500 - imageWidth // to cater for image width & height
+
+	var theLeftSide = document.getElementById('leftside')
+	var theRightSide = document.getElementById('rightside')
+
+	theBody.onclick = function gameOver() {
+		alert('game over!')
+		theBody.onclick = null
+		theLeftSide.lastChild.onclick = null
+	}
+
+	function generateFaces() {
+		var i = 1;
+		while ( i <= numberOfFaces) {
+			// console.log('inside loop')
+
+			var rtop = Math.random() * topmax
+			rtop = Math.floor(rtop)
+
+			var rleft = Math.random() * leftmax
+			rleft = Math.floor(rleft)
+
+			var imageElement = document.createElement('img')
+			imageElement.setAttribute('src', 'http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png')
+			
+			imageElement.setAttribute('height', imageHeight + 'px')
+			imageElement.setAttribute('width', imageWidth + 'px')
+			imageElement.style.top = rtop + 'px'
+			imageElement.style.left = rleft + 'px'
+
+			theLeftSide.appendChild(imageElement)
+			// console.log(imageElement)
+			i = i + 1
+		}
+
+		console.log(theLeftSide.lastChild)
+		
+		theLeftSide.lastChild.onclick = function nextLevel(event) {
+			event.stopPropagation()
+			numberOfFaces += 5
+			// remove the rightside div?
+			rightSideImages.remove()
+
+			// remove all the faces from left side div
+			while (theLeftSide.firstChild) {
+				theLeftSide.removeChild(theLeftSide.firstChild)
+			}
+
+			generateFaces()
+		}
+
+
+		var rightSideImages = theLeftSide.cloneNode(true)
+		rightSideImages.removeChild(rightSideImages.lastChild)
+		theRightSide.appendChild(rightSideImages)
+
+	}
+
+</script>
+
+</body>
+
+</html>
