@@ -1,0 +1,74 @@
+<!doctype html>
+<head></head>
+<body onload = "generatefaces()">
+
+
+	<style>
+	#leftside {
+				width: 500px;
+				height:500px;
+	}
+	#rightside{
+				width: 500px;
+				height:500px;
+				left:500px;
+				border-left:1px solid black;
+	 }        
+	div       {
+				position: absolute;
+	 }  
+	img       {
+		        position: absolute;
+
+	 }            
+	</style>
+	<h1>  Matching Game </h1>
+	<p>Click on the extra smiling face on the left</p>
+	<div id = 'leftside'></div>
+	<div id = 'rightside'></div>	
+	<script>
+		var numoffaces = 5
+		var theleftside = document.getElementById('leftside')
+	
+		var imagewidth = 100;
+		var imageheight = 100;
+		function generatefaces(){
+				var i = 1;
+				while ( i <= 5){
+					var rtop = Math.random() * (500 - imageheight)
+					rtop = Math.floor(rtop)
+					var rleft = Math.random() * (500 - imagewidth)
+					rleft = Math.floor(rleft)
+					var image = document.createElement("img")
+					image.src = 'http://home.cse.ust.hk/~rossiter/mooc/matching_game/smile.png'
+					image.style.height = imageheight + 'px'
+					image.style.width = imagewidth + 'px'
+					image.style.left = rleft + 'px'
+					image.style.top = rtop + 'px'
+					theleftside.appendChild(image)
+					//console.log(image)
+					i++;
+				}
+        }
+
+	</script>
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
