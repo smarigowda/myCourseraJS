@@ -9,9 +9,20 @@ header {
 h1 {
 	text-align: center;
 	color: #b22222;
+	text-transform: uppercase;
 }
 
 h2 {
-	color: #6b8e23;
+	color: #6bFF23;
 	text-transform: uppercase;
+}
+
+section {
+	background-color: #786f76;
+}
+
+a {
+	text-align: center;
+	color: #c71585;
+	background-color: #eee8aa;
 }
