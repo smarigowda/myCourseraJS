@@ -26,3 +26,19 @@ a {
 	color: #c71585;
 	background-color: #eee8aa;
 }
+
+h1, h2 {
+	outline: 2px dashed #ff4500;
+}
+
+nav {
+	outline: 1px dashed #191970;
+}
+
+section {
+	outline: 2px dashed #6b8e23;
+}
+
+ul {
+	outline: 2px dashed #00bfff;
+}
