@@ -47,8 +47,8 @@ section {
 
 a {
 	text-align: center;
-	color: #c71585;
-	background-color: #eee8aa;
+	/*color: #c71585;*/
+	/*background-color: #eee8aa;*/
 }
 
 aside {
@@ -65,7 +65,7 @@ nav {
 
 nav a {
 	display: inline-block;
-	width: 22%;
+	width: 20%;
 	text-decoration: none;
 	height: 35px;
 	text-align: center;
@@ -74,6 +74,11 @@ nav a {
 	color: #000000;
 	border-radius: 10px;
 	margin-right: 5px;
+	opacity: 0.4;
+}
+
+nav a.active {
+	opacity: 1;
 }
 /*h1, h2 {
 	outline: 2px dashed #ff4500;
