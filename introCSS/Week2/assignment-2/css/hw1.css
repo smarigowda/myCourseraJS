@@ -13,7 +13,7 @@ img {
 	height: 75px;
 	display: block;
 	border: 1px solid black;
-	margin: 10px auto;
+	margin: 10px auto; /* top and bottom 10px left and right is auto */
 }
 
 header {
@@ -42,14 +42,8 @@ h2 {
 	background-color: #ffffff;
 	float: left;
 	width: 64%;
-	height: 300px;
+	height: 400px;
 	padding: 3%;
-}
-
-a {
-	text-align: center;
-	/*color: #c71585;*/
-	/*background-color: #eee8aa;*/
 }
 
 .left {
@@ -69,7 +63,6 @@ nav a {
 	width: 20%;
 	text-decoration: none;
 	height: 35px;
-	text-align: center;
 	line-height: 35px;
 	background: #ffffff;
 	color: #000000;
@@ -90,18 +83,3 @@ nav a {
 nav a.active {
 	opacity: 1;
 }
-/*h1, h2 {
-	outline: 2px dashed #ff4500;
-}
-*/
-/*nav {
-	outline: 1px dashed #191970;
-}
-
-section {
-	outline: 2px dashed #6b8e23;
-}*/
-
-/*ul {
-	outline: 2px dashed #00bfff;
-}*/
