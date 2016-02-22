@@ -1,0 +1,10 @@
+/*descendent selector*/
+
+div a {
+	background-color: red;
+}
+
+/*child selector*/
+/*div > a {
+	background-color: red;
+}*/
