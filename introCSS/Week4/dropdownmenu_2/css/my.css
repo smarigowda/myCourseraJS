@@ -1,6 +1,17 @@
 * {
 	box-sizing: border-box;
 }
+
+#one {
+	position: relative;
+}
+
+#two {
+	position: absolute;
+	/*top: 100%;*/
+	left: 25%;
+}
+
 /* hide all sub menus */
 nav ul ul {
 	display: none;
@@ -16,9 +27,14 @@ nav ul ul {
 }
 
 /* make all list items float left*/
-/* this places all the elements horizontally */
+/* this places all the list elements horizontally */
 nav ul li {
 	float: left;
+}
+
+/* sub menu list items should not float */
+nav ul ul li {
+	float: none;
 }
 
 /* this is required in order to position the sub - sub menu*/
@@ -36,7 +52,7 @@ nav ul ul ul {
 
 nav ul li a {
 	display: block; /* layout */
-	padding: 25px 40px;
+	padding: 5px 15px;
 	color: #757575;
 	text-decoration: none;
 }
@@ -59,13 +75,6 @@ nav ul li:hover {
 		/*background: -webkit-linear-gradient(top, #4f5964 0%,#5f6975 40%);*/
 }
 
-
-/* sub menu list items should not float */
-nav ul ul li {
-	float: none;
-}
-
-
 nav ul {
 	background: #efefef;
 /*	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
@@ -78,22 +87,10 @@ nav ul {
 	display: inline-table;
 }
 
-nav ul:after {
-/*		content: "";
-		clear: both;
-		display: block;
-*/}
-
-
-
-
-
 nav ul li:hover a {
 			/*color: #fff;*/
 			color: blue;
 }
-
-
 
 nav ul ul {
 	/*background: #5f6975;*/
@@ -103,12 +100,8 @@ nav ul ul {
 }
 
 nav ul ul li {
-		border-top: 1px solid #6b727c;
+		/*border-top: 1px solid #6b727c;*/
 		border-bottom: 1px solid #575f6a;
-}
-
-nav ul ul li a {
-			padding: 15px 60px;
 }	
 
 nav ul ul li a:hover {
