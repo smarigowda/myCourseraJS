@@ -18,8 +18,14 @@
 	width: 100%;
 }
 
+#two ul > li {
+	font-size: 110%;
+	background: url('http://www.harrypottertheplay.com/content/themes/full-site/build/images/bg/nav-brown-top.png') bottom repeat-x;
+	margin: 1%;
+}
+
 ul li {
-	width: 150px;
+	width: 170px;
 }
 
 /* hide all sub menus */
@@ -81,7 +87,7 @@ nice trick
 it matches any sub menu. sub and sub-sub menu
 */
 /* block or inline bliock */
-nav ul li:hover > ul {
+nav li:hover > ul {
 	/*display: block;*/ 
 	display: inline-block;
 }
@@ -95,7 +101,7 @@ nav ul li:hover {
 }
 
 nav ul {
-	background: #efefef;
+	/*background: #efefef;*/
 /*	background: linear-gradient(top, #efefef 0%, #bbbbbb 100%);  
 	background: -moz-linear-gradient(top, #efefef 0%, #bbbbbb 100%); 
 	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
@@ -120,7 +126,7 @@ nav ul ul {
 
 nav ul ul li {
 		/*border-top: 1px solid #6b727c;*/
-		border-bottom: 1px solid #575f6a;
+		/*border-bottom: 1px solid #575f6a;*/
 }	
 
 nav ul ul li a:hover {
@@ -128,8 +134,17 @@ nav ul ul li a:hover {
 				background: black;
 }
 
+/*nav li {
+	border-right: 1px solid black;
+}
 
+nav li li {
+	border-right: none;
+}
 
+nav li:last-child { 
+	border-right: none;
+}*/
 
 
 
