@@ -7,13 +7,28 @@
 }
 
 #two {
-	position: absolute;
-	/*top: 100%;*/
-	left: 25%;
+/*	position: absolute;
+	top: 100%;
+	left: 25%;*/
+	width: 100%;
+	text-align: center;
+}
+
+#two ul {
+	width: 100%;
+}
+
+ul li {
+	width: 150px;
 }
 
 /* hide all sub menus */
-nav ul ul {
+/*nav ul ul {
+	display: none;
+}*/
+
+/* hide all sub menus */
+nav li ul {
 	display: none;
 }
 
@@ -21,9 +36,13 @@ nav ul {
 	position: relative;
 }
 
+nav ul li {
+	position: relative;
+}
 nav ul ul {
 	position: absolute;
-	/*top: 100%;*/ /* not required */
+	top: 100%;
+	left: 0;
 }
 
 /* make all list items float left*/
@@ -52,7 +71,7 @@ nav ul ul ul {
 
 nav ul li a {
 	display: block; /* layout */
-	padding: 5px 15px;
+	padding: 15px 25px;
 	color: #757575;
 	text-decoration: none;
 }
@@ -82,7 +101,7 @@ nav ul {
 	background: -webkit-linear-gradient(top, #efefef 0%,#bbbbbb 100%); 
 */	/*box-shadow: 0px 0px 9px rgba(0,0,0,0.15);*/
 	padding: 0 20px;
-	border-radius: 10px;
+	/*border-radius: 10px;*/
 	list-style: none;
 	display: inline-table;
 }
