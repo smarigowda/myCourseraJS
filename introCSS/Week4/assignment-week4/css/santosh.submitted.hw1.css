@@ -1,0 +1,169 @@
+* {
+	padding: 0;
+	/*margin: 0;*/
+}
+
+body {
+	margin: 10px;
+	padding: 10px;
+}
+
+img {
+	width: 75px;
+	height: 75px;
+	display: block;
+	border: 1px solid black;
+	margin: 10px auto; /* top and bottom 10px left and right is auto */
+}
+
+header {
+	background-color: #dcdcdc;
+	background-image: url('../images/flywheel.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 150px;
+	width: 100%;
+	padding: 10px;
+}
+
+h1 {
+	padding-top: 20px;
+	text-align: center;
+	color: #ffffff;
+	text-transform: uppercase;
+	font-size: 200%;
+}
+
+h2 {
+	color: #6bFF23;
+	text-transform: uppercase;
+}
+
+.right {
+	background-color: #ffffff;
+	float: left;
+	width: 64%;
+	height: 400px;
+	padding: 3%;
+	/*overflow: hidden;*/
+}
+
+.left {
+	float: left;
+	width: 15%;
+	height: 600px;
+	background-color: #008000;
+}
+
+nav {
+	text-align: center;
+	margin-top: 20px;
+}
+
+nav a {
+	display: inline-block;
+	width: 20%;
+	text-decoration: none;
+	height: 35px;
+	line-height: 35px;
+	background: #ffffff;
+	color: #000000;
+	margin: 5px;
+	padding: 5px;
+	opacity: 0.4;
+
+	/* Safari 3-4, iOS 1-3.2, Android 1.6- */
+	-webkit-border-radius: 12px;
+
+	/* Firefox 1-3.6 */
+	-moz-border-radius: 12px;
+	
+	/* Opera 10.5, IE 9, Safari 5, Chrome, Firefox 4, iOS 4, Android 2.1+ */
+	border-radius: 12px;
+}
+
+nav a.active {
+	opacity: 1;
+}
+
+table {
+	font-family: "Times New Roman", Arial, sans-serif;
+	font-size: 100%;
+	font-weight: normal;
+	line-height: 1;
+	width: 75%;
+	margin: 1.2em 0 0 12em;
+}
+
+td, th {
+	padding: 0.5em;
+}
+
+td {
+	background-color: #E0FFC1;
+	color: #000ABC;
+	border-radius: 2px;
+
+	/* no prefixes are required for text-shadow
+	check 
+	http://shouldiprefix.com/#text-shadow 
+	http://caniuse.com/#search=text-shadow
+	*/
+	text-shadow: 0.01em 0.01em 0.01em black;
+}
+
+th { 
+	color: #000;
+	border: 0.3px solid #ADFF2F;
+	border-top-left-radius: 0.4em;
+	border-top-right-radius: 0.4em;
+	border-bottom: 2px solid #000;
+	background-color: #69A131;
+
+	/* prefix is not required for gradient, 
+	check -- http://shouldiprefix.com/#gradients
+	http://caniuse.com/#search=gradient
+	*/
+	/* Fx 10+, Op 11.6+, Ch 26+, IE 10 */
+	background: linear-gradient(to top, rgba(200,255,82,1) 0%, rgba(145,232,66,1) 100%);
+}
+
+/* first child of header row and first child of all other rows */
+tr th:first-child, tr td:first-child {  
+ 	text-align: left;
+}
+
+tr th:not(:first-child), tr td:not(:first-child) {
+ 	text-align: center;
+}
+
+/* another way is using n+2 to match all except first */
+/* tr td:nth-child(n+2) */
+
+tr td {
+	opacity: 0.7;
+}
+
+tr:hover td {
+	opacity: 1.0;
+}
+
+th {
+	text-shadow: 0.05px 0.05px 0.05px #000; 
+}
+
+table {
+	position: relative;
+}
+
+/* this is a demo of how we can use the generated content feature of CSS3 */
+tr:last-child::after {
+	position: absolute;
+	display: block;
+	content: '';
+	width: 100%;
+	height:10px;
+	top: 100%;
+	left: 0;
+	background: url(http://www.harrypottertheplay.com/content/themes/full-site/build/images/bg/nav-brown-top.png) repeat-x 0 0;
+}
